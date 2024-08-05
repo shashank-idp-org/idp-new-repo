@@ -1,5 +1,5 @@
 pipeline:
-  name: test-remote-pipeline
+  name: test-remote-pipeline123456
   identifier: testremotepipeline
   projectIdentifier: default_project
   orgIdentifier: default
