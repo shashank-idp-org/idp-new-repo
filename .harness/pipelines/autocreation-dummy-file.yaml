@@ -1,0 +1,35 @@
+pipeline:
+  name: test-remote-pipelineabcderf
+  identifier: testremotepipeline
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.shashank_connector
+        repoName: idp-new-repo
+        build: <+input>
+  stages:
+    - stage:
+        name: build-testpqwer
+        identifier: buildtest
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: test
+                  identifier: test
+                  spec:
+                    shell: Sh
+                    command: echo "test"
