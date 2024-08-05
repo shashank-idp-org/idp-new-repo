@@ -1,0 +1,35 @@
+pipeline:
+  name: unit-test-pipeline
+  identifier: unittestpipeline
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.shashank_connector
+        repoName: idp-new-repo
+        build: <+input>
+  stages:
+    - stage:
+        name: build-test123
+        identifier: buildtest1
+        description: "this is a new pipeline"
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: test
+                  identifier: test
+                  spec:
+                    shell: Sh
+                    command: echo "test1234"
