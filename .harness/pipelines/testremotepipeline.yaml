@@ -28,7 +28,7 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: test
+                  name: test1234
                   identifier: test
                   spec:
                     shell: Sh
